@@ -24,7 +24,7 @@ var colors = require('colors');
 fs.readdir('.', function(err, files) {
     console.log(files);
 
-    fs.writeFile('./nowepliki.txt', files.append, function(err) {
+    fs.writeFile('./nowepliki.txt', files.join(), function(err) {
         if (err) throw err;
     });
     console.log("Skopiowane".blue);
